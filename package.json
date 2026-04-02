@@ -2,8 +2,8 @@
   "name": "civictrack",
   "version": "1.0.0",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build && cp -r dist ../backend/public",
-    "start": "cd backend && npm install && node server.js"
+    "build": "cd frontend && npm install && npm run build && mkdir -p ../backend/public && cp -r dist/* ../backend/public/",
+    "start": "node backend/server.js"
   },
   "engines": {
     "node": "20.x"
