@@ -1,13 +1,11 @@
 {
   "name": "civictrack",
   "version": "1.0.0",
-  "description": "Online Complaint Registration & Management System for Urban Civic Issues",
   "scripts": {
-    "install:all": "cd backend && npm install && cd ../frontend && npm install",
-    "dev": "npm run dev:backend & npm run dev:frontend",
-    "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd frontend && npm run dev",
-    "build": "cd frontend && npm run build",
-    "start": "cd backend && npm start"
+    "build": "cd frontend && npm install && npm run build && cp -r dist ../backend/public",
+    "start": "cd backend && npm install && node server.js"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
